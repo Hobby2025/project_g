@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>타워디펜스</title>
+    <style>
+      body {
+        background: #faf6ff;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #game-container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      canvas {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game-container"></div>
+    <!-- 메인 게임 스크립트 (모듈로 로드) -->
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
