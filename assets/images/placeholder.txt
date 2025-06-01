@@ -1,0 +1,2 @@
+This directory contains placeholder images for the game.
+In a production environment, these would be replaced with actual game assets.

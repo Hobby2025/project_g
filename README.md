@@ -1,109 +1,15 @@
-# project_g
+# DevCollect - Programming Language Character Collection Game
 
-자바 스크립트로 게임 만들기
+## Overview
+DevCollect is a fun collection game where you can collect pixel art characters representing different programming languages by making contributions like commits, PRs, or other coding activities. Each programming language has its own unique character with special attributes and abilities.
 
-# [NEW] 타워디펜스 로그라이크 (Clean Architecture)
+## How to Play
+1. Make coding contributions (commits, PRs, etc.)
+2. Automatically collect programming language characters
+3. Build your collection and unlock special combinations
+4. Showcase your programming language collection
 
-## 🏗️ 프로젝트 구조 (예시)
-
-```
-src/
-├── assets/           # 게임 에셋 (이미지, 사운드 등)
-├── config/           # 게임 설정 파일
-├── core/             # 핵심 시스템 (ECS, 이벤트 등)
-│   ├── ecs/          # Entity Component System
-│   ├── events/       # 이벤트 시스템
-│   └── utils/        # 유틸리티 함수
-├── entities/         # 게임 엔티티
-│   ├── towers/       # 타워 (중앙 고정)
-│   ├── enemies/      # 적 (원형 경로)
-│   └── projectiles/  # 투사체
-├── scenes/           # 게임 씬
-│   ├── BootScene.js
-│   ├── GameScene.js  # 원형 맵, 중앙 타워, 적 원운동, 게임 오버 처리
-│   └── UIScene.js    # UI(골드/웨이브/메시지) 분리
-├── systems/          # ECS 시스템
-│   ├── combat/       # 전투 시스템
-│   ├── movement/     # 이동 시스템 (원운동)
-│   └── rendering/    # 렌더링 시스템
-└── utils/            # 헬퍼 유틸리티
-```
-
-## 🚀 개발 플랜
-
-### Phase 1: 코어 아키텍처
-
-- [x] 프로젝트 구조 및 디렉토리 정리
-- [x] ECS(엔티티-컴포넌트-시스템) 기본 구현 (Entity/Component/System, 컴포넌트 분리)
-- [x] 이벤트 시스템 (EventBus, 적 처치 이벤트 처리)
-- [x] 에셋 관리/기본 구조화 (config 기반 웨이브/적/타워 설정)
-
-### Phase 2: 게임 시스템
-
-- [x] 맵 및 웨이브 생성 (config로 웨이브/적 자동 스폰, 원형 맵 시각화)
-- [x] 타워 배치/업그레이드 (중앙 고정 타워, 최초 1회만 배치, 골드 소모)
-- [x] 적 웨이브 및 경로 (웨이브 자동 진행, 적 원운동/속도 적용)
-- [x] 전투 시스템 (타워 자동 공격, 투사체/데미지/사거리/쿨다운 적용)
-- [x] 게임 오버 처리 (적이 중앙 도달 시)
-
-### Phase 3: 로그라이크 요소
-
-- [ ] 절차적 맵 생성
-- [ ] 메타 성장/랜덤 이벤트
-- [ ] 퍼마데스(영구 죽음)
-
-### Phase 4: 폴리싱 및 최적화
-
-- [ ] UI/UX 개선 (골드/웨이브/메시지 표시, UIScene 분리 예정)
-- [ ] 성능 최적화
-- [ ] 사운드/이펙트
-- [ ] 밸런싱
-
----
-
-## 📝 최근 진행 내역 요약
-
-- ECS 구조 및 컴포넌트 분리 (Position/Health/SpriteComponent 등)
-- EventBus 기반 이벤트 시스템 도입 (적 처치, 골드 획득 등)
-- config 파일 기반 웨이브/적/타워 생성 구조화
-- 골드 시스템, UI(골드/웨이브/메시지) 표시 구현
-- 타워 자동 공격/투사체/쿨다운/사거리/데미지 적용
-- 적 speed, reward 등 config 기반 동작 완전 적용
-- 코드 구조 리팩토링 및 클린 아키텍처 강화
-- **UI Scene 분리**: UI(골드/웨이브/메시지) 관리 책임 분리
-- **원형 맵 구조**: 중심(400,300), 반지름 120의 원형 경로 시각화 및 적 원운동 구현
-- **타워 중앙 고정**: 플레이어 타워는 반드시 중앙(400,300)에 1회만 배치, 적은 원 궤도를 따라 이동
-- **타워 배치 제한**: 클릭으로 추가 배치 불가, 중앙 고정
-- **게임 오버 처리**: 적이 중앙 도달 시 게임 오버 및 메시지 표시
-
----
-
-## 🛠️ 개발 명령
-
-```bash
-npm install
-npm run dev
-npm run build
-```
-
----
-
-이제 각 단계별로 체크리스트를 따라가며 개발을 진행합니다.
-
-3. 타일을 하나씩 이동하며 이벤트/전투/보물 등 경험
-4. 전략적 선택을 통해 진행(아이템 사용, 동료 모집, 회피/공격 등)
-5. 보스 혹은 최종 목표 도달 시 클리어, 사망 시 기록 남기고 재도전
-
-## 5. 참고할 만한 유사 게임
-
-- 뱀파이어 서바이벌 (Vampire Survivors): 로그라이크, 랜덤성, 성장 요소
-- 슬레이 더 스파이어 (Slay the Spire): 선택지, 전략, 덱빌딩
-- 던전앤파이터 미니게임, 보드게임류, 퍼즐앤드래곤
-
-## 6. 향후 발전 방향 (예시)
-
-- 캐릭터/스킨 수집, 도감 시스템
-- 멀티플레이어 협동/경쟁 모드
-- 시즌별 이벤트, 신규 맵/아이템 추가
-
----
+## Technologies
+- Phaser.js - Game engine
+- JavaScript/HTML5 - Frontend
+- Node.js - Backend (optional for tracking real contributions)

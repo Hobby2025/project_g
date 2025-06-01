@@ -1,19 +1,24 @@
 {
-  "name": "project_g",
+  "name": "devcollect",
   "version": "1.0.0",
-  "description": "자바 스크립트로 게임 만들기",
+  "description": "A programming language character collection game",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
+    "start": "http-server -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "game",
+    "collection",
+    "programming",
+    "languages"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "phaser": "^3.90.0"
+    "phaser": "^3.60.0"
   },
   "devDependencies": {
-    "vite": "^6.3.5"
+    "http-server": "^14.1.1"
   }
 }

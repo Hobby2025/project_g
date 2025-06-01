@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <title>타워디펜스</title>
-    <style>
-      body {
-        background: #faf6ff;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-      #game-container {
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-      }
-      canvas {
-        display: block;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevCollect - Programming Language Collection Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
     <div id="game-container"></div>
-    <!-- 메인 게임 스크립트 (모듈로 로드) -->
-    <script type="module" src="./src/main.js"></script>
-  </body>
+    
+    <!-- Load Phaser -->
+    <script src="node_modules/phaser/dist/phaser.min.js"></script>
+    
+    <!-- Load game scripts -->
+    <script src="js/characters/Character.js"></script>
+    <script src="js/characters/CharacterFactory.js"></script>
+    <script src="js/scenes/BootScene.js"></script>
+    <script src="js/scenes/PreloadScene.js"></script>
+    <script src="js/scenes/MenuScene.js"></script>
+    <script src="js/scenes/GameScene.js"></script>
+    <script src="js/scenes/CollectionScene.js"></script>
+    <script src="js/game.js"></script>
+</body>
 </html>
